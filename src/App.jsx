@@ -157,20 +157,14 @@ function App() {
               <div className="detail-icon" aria-hidden="true">🕛</div>
               <span>TIME</span>
               <h3>12:00 PM</h3>
-              <p>Lunch &amp; Celebration</p>
+              <p>Lunch </p>
             </article>
 
             <article className="detail-item">
               <div className="detail-icon" aria-hidden="true">📍</div>
               <span>VENUE</span>
-              <h3>KC 55</h3>
-              <p className="venue-address">
-                Jalan Kasia Ville 7,
-                <br />
-                Taman Tuanku Jaafar Golf &amp; Country Resort,
-                <br />
-                71450 Seremban, Negeri Sembilan
-              </p>
+              <h3>Taman Tuanku Jaafar</h3>
+             
             </article>
           </div>
 
