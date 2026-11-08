@@ -1,7 +1,21 @@
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-/* GLOBAL STYLES */
+/* GOOGLE FONTS ARE LOADED IN index.html */
+
+:root {
+  --font-heading: "Mozilla Headline", sans-serif;
+  --font-script: "Playwrite HU", cursive;
+  --font-signature: "Momo Signature", cursive;
+  --font-pacifico: "Pacifico", cursive;
+
+  --green: #173c2f;
+  --deep-green: #06291f;
+  --cream: #fff4dc;
+  --gold: #c49a47;
+  --gold-light: #f1c66f;
+  --terracotta: #a64b2d;
+  --text-brown: #594735;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,25 +27,23 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: #06291f;
-  color: #fff4dc;
+  font-family: var(--font-heading);
+  background: var(--deep-green);
+  color: var(--cream);
 }
 
 button,
 a {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .diwali-site {
   min-height: 100vh;
-  background: #06291f;
+  background: var(--deep-green);
   overflow-x: hidden;
 }
 
-/* =========================================
-   OPENING POSTER
-========================================= */
+/* OPENING POSTER */
 
 .poster-section {
   min-height: 100vh;
@@ -40,13 +52,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(
-      circle at center,
-      #164334 0%,
-      #06291f 70%
-    );
-  padding: 0;
+  background: radial-gradient(circle, #164334, #06291f 75%);
 }
 
 .poster-container {
@@ -65,7 +71,8 @@ a {
   object-fit: contain;
 }
 
-/* Transparent button placed over the printed poster button */
+/* TRANSPARENT BUTTON ON POSTER */
+
 .poster-click-area {
   position: absolute;
   left: 8.8%;
@@ -85,24 +92,16 @@ a {
 }
 
 .poster-click-area:focus-visible {
-  outline: 3px solid #fff4dc;
+  outline: 3px solid var(--cream);
   outline-offset: 3px;
 }
 
-/* =========================================
-   INVITATION DETAILS SECTION
-========================================= */
+/* INVITATION SECTION */
 
 .details-section {
   width: 100%;
-  background:
-    radial-gradient(
-      circle at top,
-      #fff5e3 0%,
-      #f7e6c8 65%,
-      #f1d9ad 100%
-    );
-  color: #173c2f;
+  background: radial-gradient(circle at top, #fff5e3, #f7e6c8 65%, #f1d9ad);
+  color: var(--green);
   padding: 70px 25px 50px;
   scroll-margin-top: 0;
   animation: revealSection 0.8s ease;
@@ -113,16 +112,16 @@ a {
   margin: 0 auto;
 }
 
-/* BACK TO POSTER BUTTON */
+/* BACK BUTTON */
 
 .back-button {
   display: inline-block;
   padding: 12px 22px;
-  background: #173c2f;
-  color: #fff4dc;
-  border: 1px solid #c49a47;
+  background: var(--green);
+  color: var(--cream);
+  border: 1px solid var(--gold);
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -133,7 +132,7 @@ a {
   transform: translateY(-2px);
 }
 
-/* HEADING */
+/* INVITATION HEADING */
 
 .details-heading {
   text-align: center;
@@ -141,96 +140,106 @@ a {
 }
 
 .section-label {
-  color: #a64b2d;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 4px;
+  font-family: var(--font-heading);
+  color: var(--terracotta);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .details-heading h2 {
-  margin-top: 18px;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(36px, 5vw, 58px);
-  line-height: 1.2;
-  font-weight: 600;
-  color: #173c2f;
+  margin-top: 20px;
+  font-family: var(--font-script);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--green);
 }
 
 .details-heading h2 span {
-  color: #a64b2d;
-  font-style: italic;
+  font-family: var(--font-pacifico);
+  font-weight: 400;
+  color: var(--terracotta);
 }
 
 .invitation-message {
   max-width: 620px;
   margin: 25px auto 0;
-  color: #594735;
-  font-size: 16px;
+  font-family: var(--font-heading);
+  color: var(--text-brown);
+  font-size: 14px;
+  font-weight: 300;
   line-height: 1.9;
 }
 
-/* =========================================
-   COUNTDOWN
-========================================= */
+/* COUNTDOWN */
 
 .countdown-container {
   text-align: center;
-  margin: 55px auto;
-  padding: 25px 10px;
+  margin: 38px auto;
+  padding: 20px 10px;
 }
 
 .countdown-label {
+  font-family: var(--font-heading);
   color: #96631d;
-  font-size: 12px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  margin-bottom: 25px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  margin-bottom: 22px;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .countdown div {
-  width: 110px;
-  padding: 24px 10px;
-  background: #173c2f;
-  color: #fff4dc;
-  border: 1px solid #c49a47;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(20, 45, 30, 0.12);
+  width: 90px;
+  padding: 18px 8px;
+  background: var(--green);
+  color: var(--cream);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(20, 45, 30, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.countdown div:hover {
+  transform: translateY(-4px);
 }
 
 .countdown strong {
   display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 38px;
-  font-weight: 700;
-  color: #f1c66f;
+  font-family: var(--font-heading);
+  font-size: 29px;
+  font-weight: 600;
+  color: var(--gold-light);
   line-height: 1.2;
+  font-variant-numeric: tabular-nums;
 }
 
 .countdown span {
   display: block;
-  margin-top: 10px;
-  font-size: 11px;
-  letter-spacing: 2px;
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #fff4dc;
+  color: var(--cream);
 }
 
 .countdown-message {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  color: #173c2f;
+  font-family: var(--font-script);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--green);
 }
 
-/* =========================================
-   DATE / TIME / VENUE
-========================================= */
+/* DATE, TIME AND VENUE */
 
 .details-grid {
   display: grid;
@@ -242,41 +251,48 @@ a {
 .detail-item {
   text-align: center;
   padding: 30px 20px;
-  border-top: 2px solid #c49a47;
+  border-top: 2px solid var(--gold);
   border-bottom: 1px solid #e3c78e;
 }
 
 .detail-icon {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 15px;
 }
 
 .detail-item > span {
   display: block;
-  color: #a64b2d;
-  font-size: 11px;
+  font-family: var(--font-heading);
+  color: var(--terracotta);
+  font-size: 10px;
   letter-spacing: 3px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .detail-item h3 {
   margin: 15px 0 10px;
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-  font-weight: 700;
-  color: #173c2f;
-  line-height: 1.4;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--green);
+  line-height: 1.5;
 }
 
 .detail-item p {
-  color: #594735;
-  font-size: 14px;
+  font-family: var(--font-heading);
+  color: var(--text-brown);
+  font-size: 13px;
+  font-weight: 300;
   line-height: 1.8;
 }
 
-/* =========================================
-   ADDRESS CARD
-========================================= */
+.detail-item .venue-address {
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* FULL ADDRESS CARD */
 
 .address-card {
   max-width: 800px;
@@ -289,23 +305,23 @@ a {
 }
 
 .address-label {
-  color: #a64b2d;
-  font-size: 11px;
+  font-family: var(--font-heading);
+  color: var(--terracotta);
+  font-size: 10px;
   letter-spacing: 3px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .details-address {
   margin-top: 15px;
-  font-size: 15px;
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 300;
   color: #443729;
   line-height: 1.9;
 }
 
-/* =========================================
-   GOOGLE MAPS & WAZE BUTTONS
-========================================= */
+/* GOOGLE MAPS AND WAZE */
 
 .navigation-buttons {
   display: flex;
@@ -321,21 +337,22 @@ a {
   text-decoration: none;
   padding: 15px 28px;
   border-radius: 50px;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   transition: all 0.3s ease;
 }
 
 .google-button {
-  background: #173c2f;
-  color: #fff4dc;
-  border: 1px solid #c49a47;
+  background: var(--green);
+  color: var(--cream);
+  border: 1px solid var(--gold);
 }
 
 .waze-button {
-  background: #f1c66f;
-  color: #173c2f;
+  background: var(--gold-light);
+  color: var(--green);
   border: 1px solid #d5a84e;
 }
 
@@ -344,9 +361,7 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================================
-   GOOGLE CALENDAR BUTTON
-========================================= */
+/* GOOGLE CALENDAR */
 
 .calendar-button-container {
   text-align: center;
@@ -356,25 +371,24 @@ a {
 .calendar-button {
   display: inline-block;
   background: transparent;
-  color: #173c2f;
+  color: var(--green);
   text-decoration: none;
   padding: 15px 30px;
-  border: 2px solid #c49a47;
+  border: 2px solid var(--gold);
   border-radius: 50px;
-  font-size: 14px;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .calendar-button:hover {
-  background: #173c2f;
-  color: #fff4dc;
+  background: var(--green);
+  color: var(--cream);
   transform: translateY(-3px);
 }
 
-/* =========================================
-   CLOSING MESSAGE
-========================================= */
+/* CLOSING MESSAGE */
 
 .closing-message {
   text-align: center;
@@ -390,36 +404,41 @@ a {
 }
 
 .closing-message h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 600;
-  color: #173c2f;
-  line-height: 1.4;
+  font-family: var(--font-script);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 300;
+  color: var(--green);
+  line-height: 1.8;
 }
 
 .closing-message p {
   margin-top: 20px;
-  color: #594735;
-  font-size: 14px;
-  line-height: 1.9;
+  font-family: var(--font-heading);
+  color: var(--text-brown);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2;
 }
 
 .closing-message strong {
-  color: #a64b2d;
-  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-signature);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--terracotta);
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 .invitation-footer {
   padding: 35px 20px 10px;
   text-align: center;
-  color: #594735;
-  font-size: 11px;
-  letter-spacing: 2.5px;
-  font-weight: 600;
+  color: var(--text-brown);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .invitation-footer span {
@@ -429,9 +448,23 @@ a {
   font-size: 20px;
 }
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+.designer-credit {
+  margin-top: 20px;
+  color: #755c45;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.designer-credit strong {
+  color: var(--terracotta);
+  font-family: var(--font-signature);
+  font-size: 23px;
+  font-weight: 400;
+}
+
+/* ANIMATION */
 
 @keyframes revealSection {
   from {
@@ -445,9 +478,7 @@ a {
   }
 }
 
-/* =========================================
-   TABLET RESPONSIVE
-========================================= */
+/* TABLET */
 
 @media (max-width: 768px) {
   .poster-container {
@@ -472,7 +503,7 @@ a {
   }
 
   .detail-item h3 {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .countdown {
@@ -480,22 +511,20 @@ a {
   }
 
   .countdown div {
-    width: 95px;
-    padding: 20px 8px;
+    width: 85px;
+    padding: 17px 8px;
   }
 
   .countdown strong {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .invitation-message {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
-/* =========================================
-   SMALL PHONE RESPONSIVE
-========================================= */
+/* MOBILE */
 
 @media (max-width: 480px) {
   .poster-section {
@@ -518,22 +547,23 @@ a {
   }
 
   .details-heading h2 {
-    font-size: 36px;
+    font-size: 30px;
+    line-height: 1.8;
   }
 
   .section-label {
-    font-size: 10px;
-    letter-spacing: 2.5px;
+    font-size: 9px;
+    letter-spacing: 2px;
   }
 
   .countdown-container {
-    margin: 35px auto;
+    margin: 30px auto;
     padding: 15px 5px;
   }
 
   .countdown-label {
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
   }
 
   .countdown {
@@ -541,29 +571,33 @@ a {
   }
 
   .countdown div {
-    width: 75px;
-    padding: 18px 5px;
+    width: 72px;
+    padding: 15px 5px;
   }
 
   .countdown strong {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   .countdown span {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 1px;
   }
 
   .detail-item h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .detail-item p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .details-address {
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .address-card {
+    padding: 25px 15px;
   }
 
   .navigation-buttons {
@@ -574,25 +608,35 @@ a {
   .map-button {
     width: 90%;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .calendar-button {
     width: 90%;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .closing-message h3 {
-    font-size: 29px;
+    font-size: 25px;
+    line-height: 1.8;
+  }
+
+  .closing-message strong {
+    font-size: 20px;
   }
 
   .invitation-footer {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 1.5px;
+  }
+
+  .designer-credit {
+    font-size: 10px;
   }
 }
 
-/* ACCESSIBILITY */
+/* REDUCE MOTION FOR ACCESSIBILITY */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
