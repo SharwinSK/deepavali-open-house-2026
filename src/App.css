@@ -1,14 +1,7 @@
-/* =========================================
-   GOOGLE FONTS
-========================================= */
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
-
-
-/* =========================================
-   GLOBAL STYLES
-========================================= */
-
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -21,255 +14,160 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #102d24;
+  background: #06291f;
+  color: #fff4dc;
+}
+
+button,
+a {
+  font-family: 'DM Sans', sans-serif;
 }
 
 .diwali-site {
   min-height: 100vh;
-  background: #102d24;
-  color: #fff4dc;
-  font-family: 'DM Sans', sans-serif;
+  background: #06291f;
+  overflow-x: hidden;
 }
-
-.diwali-site,
-.diwali-site * {
-  box-sizing: border-box;
-  line-height: 1.85;
-}
-
 
 /* =========================================
-   NAVIGATION
+   OPENING POSTER
 ========================================= */
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 7%;
-  border-bottom: 1px solid #ffffff20;
-}
-
-.brand {
-  color: #f5c76b;
-  font-size: 16px; /* increased from 13px */
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.brand-icon {
-  margin-right: 10px;
-  font-size: 22px;
-}
-
-.nav-label {
-  font-size: 12px; /* increased from 10px */
-  letter-spacing: 3px;
-  color: #d6c5a2;
-}
-
-
-/* =========================================
-   HERO SECTION
-========================================= */
-
-.hero {
-  min-height: 680px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 65px 7%;
-  gap: 40px;
-}
-
-.hero-left {
-  max-width: 550px;
-}
-
-.event-tag {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid #d5a64a;
-  border-radius: 30px;
-  color: #f5c76b;
-  font-size: 11px; /* increased from 10px */
-  letter-spacing: 2.2px;
-  margin-bottom: 30px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(55px, 7vw, 90px);
-  line-height: 1.1; /* increased from 0.98 */
-  font-weight: 600;
-  color: #fff4dc;
-}
-
-.hero h1 span {
-  color: #f5c76b;
-  font-style: italic;
-}
-
-.hero-description {
-  margin-top: 30px;
-  max-width: 380px;
-  color: #d6c5a2;
-  font-size: 16px; /* increased from 15px */
-  line-height: 1.9;
-}
-
-.hero-host {
-  margin-top: 35px;
-}
-
-.hero-host span {
-  font-size: 11px; /* increased from 10px */
-  letter-spacing: 3.2px;
-  color: #d5a64a;
-}
-
-.hero-host h3 {
-  margin-top: 10px;
-  font-size: 18px; /* increased from 15px */
-  letter-spacing: 1.1px;
-}
-
-.hero-host p {
-  margin-top: 5px;
-  color: #d6c5a2;
-  font-size: 13px; /* increased from 12px */
-}
-
-
-/* =========================================
-   INVITATION BUTTON
-========================================= */
-
-.modern-button {
-  margin-top: 30px;
-  padding: 16px 30px;
-  border: none;
-  border-radius: 5px;
-  background: #f5c76b;
-  color: #102d24;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px; /* explicitly set */
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.modern-button:hover {
-  background: #ffe2a0;
-  transform: translateY(-3px);
-}
-
-
-/* =========================================
-   HERO VISUAL
-========================================= */
-
-.hero-right {
-  position: relative;
-  min-height: 520px;
-  background: #a83c25;
-  border-radius: 250px 250px 15px 15px;
+.poster-section {
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at center,
+      #164334 0%,
+      #06291f 70%
+    );
+  padding: 0;
 }
 
-.sun-shape {
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: #e8a74c;
-  top: 70px;
-  opacity: 0.95;
-}
-
-.lamp-visual {
+.poster-container {
   position: relative;
-  z-index: 2;
-  font-size: 180px;
-  animation: lampFloat 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px #ffcc61);
+  width: min(100%, 66.67svh);
+  max-height: 100svh;
+  margin: auto;
+  line-height: 0;
 }
 
-.floating-flower {
+.invitation-poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100svh;
+  object-fit: contain;
+}
+
+/* Transparent button placed over the printed poster button */
+.poster-click-area {
   position: absolute;
-  color: #f5c76b;
-  font-size: 50px;
-  animation: flowerFloat 4s ease-in-out infinite;
+  left: 8.8%;
+  top: 51.8%;
+  width: 36.5%;
+  height: 5.2%;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
 }
 
-.flower-one {
-  top: 70px;
-  left: 40px;
+.poster-click-area:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
-.flower-two {
-  bottom: 100px;
-  right: 35px;
-  animation-delay: 1.5s;
+.poster-click-area:focus-visible {
+  outline: 3px solid #fff4dc;
+  outline-offset: 3px;
 }
-
-.vertical-text {
-  position: absolute;
-  right: 15px;
-  top: 40%;
-  writing-mode: vertical-rl;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #fff4dc;
-}
-
-.image-caption {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  right: 25px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #fff4dc;
-}
-
 
 /* =========================================
-   INVITATION DETAILS
+   INVITATION DETAILS SECTION
 ========================================= */
 
 .details-section {
-  padding: 80px 7%;
-  background: #f8edda;
-  color: #102d24;
-  text-align: center;
-  animation: reveal 0.8s ease;
-  scroll-margin-top: 30px;
-  line-height: 1.9;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at top,
+      #fff5e3 0%,
+      #f7e6c8 65%,
+      #f1d9ad 100%
+    );
+  color: #173c2f;
+  padding: 70px 25px 50px;
+  scroll-margin-top: 0;
+  animation: revealSection 0.8s ease;
 }
 
-.details-heading p {
-  color: #a83c25;
-  letter-spacing: 3.2px;
-  font-size: 11px;
+.details-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* BACK TO POSTER BUTTON */
+
+.back-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #173c2f;
+  color: #fff4dc;
+  border: 1px solid #c49a47;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #245541;
+  transform: translateY(-2px);
+}
+
+/* HEADING */
+
+.details-heading {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.section-label {
+  color: #a64b2d;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 4px;
 }
 
 .details-heading h2 {
-  margin-top: 15px;
+  margin-top: 18px;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 5vw, 50px);
-  font-weight: 700;
-  line-height: 1.25;
-  color: #123c2f;
-  text-shadow: none;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.2;
+  font-weight: 600;
+  color: #173c2f;
 }
 
+.details-heading h2 span {
+  color: #a64b2d;
+  font-style: italic;
+}
+
+.invitation-message {
+  max-width: 620px;
+  margin: 25px auto 0;
+  color: #594735;
+  font-size: 16px;
+  line-height: 1.9;
+}
 
 /* =========================================
    COUNTDOWN
@@ -277,14 +175,14 @@ body {
 
 .countdown-container {
   text-align: center;
-  margin: 50px auto;
-  padding: 30px 20px;
+  margin: 55px auto;
+  padding: 25px 10px;
 }
 
-.countdown-container > p {
-  color: #9b6b25;
+.countdown-label {
+  color: #96631d;
   font-size: 12px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -292,91 +190,118 @@ body {
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .countdown div {
-  background: #183c32;
-  color: #f8edda;
-  width: 100px;
-  padding: 25px 10px;
+  width: 110px;
+  padding: 24px 10px;
+  background: #173c2f;
+  color: #fff4dc;
+  border: 1px solid #c49a47;
   border-radius: 12px;
-  border: 1px solid #c7a45d;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(20, 45, 30, 0.12);
 }
 
 .countdown strong {
   display: block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 42px; /* increased from 36px */
+  font-size: 38px;
   font-weight: 700;
-  color: #e2bd70;
+  color: #f1c66f;
+  line-height: 1.2;
 }
 
 .countdown span {
   display: block;
-  margin-top: 8px;
-  font-size: 12px; /* increased from 11px */
-  letter-spacing: 2.5px;
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #f8edda;
+  color: #fff4dc;
 }
 
+.countdown-message {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #173c2f;
+}
 
 /* =========================================
    DATE / TIME / VENUE
 ========================================= */
 
 .details-grid {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  margin-top: 45px;
 }
 
 .detail-item {
-  padding: 30px 15px;
-  border-top: 1px solid #d5a64a;
-  line-height: 1.9;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid #c49a47;
+  border-bottom: 1px solid #e3c78e;
+}
+
+.detail-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .detail-item > span {
-  color: #b45a35;
-  font-size: 11px; /* increased from 10px */
-  letter-spacing: 3.2px;
+  display: block;
+  color: #a64b2d;
+  font-size: 11px;
+  letter-spacing: 3px;
   font-weight: 700;
 }
 
 .detail-item h3 {
-  margin: 15px 0;
+  margin: 15px 0 10px;
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 700;
-  color: #123c2f;
+  color: #173c2f;
+  line-height: 1.4;
 }
 
 .detail-item p {
-  color: #665344;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px; /* increased from 14px */
-  line-height: 1.9;
+  color: #594735;
+  font-size: 14px;
+  line-height: 1.8;
 }
-
 
 /* =========================================
-   ADDRESS
+   ADDRESS CARD
 ========================================= */
 
-.details-address {
-  margin-top: 30px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px; /* increased from 14px */
-  font-weight: 500;
-  color: #514336;
-  line-height: 1.9;
+.address-card {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid #d6b66e;
+  border-radius: 12px;
+  text-align: center;
 }
 
+.address-label {
+  color: #a64b2d;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.details-address {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #443729;
+  line-height: 1.9;
+}
 
 /* =========================================
    GOOGLE MAPS & WAZE BUTTONS
@@ -396,23 +321,22 @@ body {
   text-decoration: none;
   padding: 15px 28px;
   border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 .google-button {
-  background: #183c32;
-  color: #f8edda;
-  border: 1px solid #c7a45d;
+  background: #173c2f;
+  color: #fff4dc;
+  border: 1px solid #c49a47;
 }
 
 .waze-button {
-  background: #e2bd70;
-  color: #183c32;
-  border: 1px solid #e2bd70;
+  background: #f1c66f;
+  color: #173c2f;
+  border: 1px solid #d5a84e;
 }
 
 .map-button:hover {
@@ -420,99 +344,96 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-
 /* =========================================
    GOOGLE CALENDAR BUTTON
 ========================================= */
 
 .calendar-button-container {
   text-align: center;
-  margin: 25px auto 50px;
+  margin: 30px auto 55px;
 }
 
 .calendar-button {
   display: inline-block;
   background: transparent;
-  color: #183c32;
+  color: #173c2f;
   text-decoration: none;
   padding: 15px 30px;
-  border: 1px solid #c7a45d;
+  border: 2px solid #c49a47;
   border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
 .calendar-button:hover {
-  background: #183c32;
-  color: #f8edda;
+  background: #173c2f;
+  color: #fff4dc;
   transform: translateY(-3px);
 }
 
+/* =========================================
+   CLOSING MESSAGE
+========================================= */
+
+.closing-message {
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #d6b66e;
+  border-bottom: 1px solid #d6b66e;
+}
+
+.closing-decoration {
+  color: #a66b1e;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.closing-message h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  color: #173c2f;
+  line-height: 1.4;
+}
+
+.closing-message p {
+  margin-top: 20px;
+  color: #594735;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.closing-message strong {
+  color: #a64b2d;
+  letter-spacing: 1px;
+}
 
 /* =========================================
    FOOTER
 ========================================= */
 
-footer {
-  padding: 30px 20px;
+.invitation-footer {
+  padding: 35px 20px 10px;
   text-align: center;
-  color: #d6c5a2;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px; /* increased from 10px */
-  letter-spacing: 3.2px;
+  color: #594735;
+  font-size: 11px;
+  letter-spacing: 2.5px;
   font-weight: 600;
 }
 
-footer p {
-  font-weight: 600;
-}
-
-footer span {
+.invitation-footer span {
   display: block;
   margin-top: 15px;
-  color: #f5c76b;
+  color: #a66b1e;
   font-size: 20px;
 }
-
 
 /* =========================================
    ANIMATIONS
 ========================================= */
 
-@keyframes lampFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes flowerFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-20px) rotate(15deg);
-  }
-}
-
-@keyframes diyaGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(226, 189, 112, 0.3));
-  }
-
-  50% {
-    filter: drop-shadow(0 0 35px rgba(226, 189, 112, 0.8));
-  }
-}
-
-@keyframes reveal {
+@keyframes revealSection {
   from {
     opacity: 0;
     transform: translateY(25px);
@@ -524,145 +445,125 @@ footer span {
   }
 }
 
-
 /* =========================================
-   FIREWORKS EFFECT
-========================================= */
-
-.hero-right::before,
-.hero-right::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #e2bd70;
-  z-index: 5;
-  pointer-events: none;
-
-  box-shadow:
-    0 -35px 0 #e2bd70,
-    25px -25px 0 #d98245,
-    35px 0 0 #e2bd70,
-    25px 25px 0 #d98245,
-    0 35px 0 #e2bd70,
-    -25px 25px 0 #d98245,
-    -35px 0 0 #e2bd70,
-    -25px -25px 0 #d98245,
-    0 -55px 0 #d98245,
-    40px -40px 0 #e2bd70,
-    55px 0 0 #d98245,
-    40px 40px 0 #e2bd70,
-    0 55px 0 #d98245,
-    -40px 40px 0 #e2bd70,
-    -55px 0 0 #d98245,
-    -40px -40px 0 #e2bd70;
-}
-
-.hero-right::before {
-  top: 20%;
-  left: 25%;
-  animation: fireworkBurst 2.5s ease-out infinite;
-}
-
-.hero-right::after {
-  top: 65%;
-  right: 20%;
-  animation: fireworkBurst 2.5s ease-out infinite;
-  animation-delay: 1.2s;
-}
-
-@keyframes fireworkBurst {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-
-  20% {
-    transform: scale(0.5);
-    opacity: 1;
-  }
-
-  60% {
-    transform: scale(1.3);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN - TABLET & MOBILE
+   TABLET RESPONSIVE
 ========================================= */
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 20px;
+  .poster-container {
+    width: 100%;
   }
 
-  .nav-label {
-    font-size: 10px; /* reduced slightly for small screens */
-    letter-spacing: 1.5px;
+  .details-section {
+    padding: 50px 20px 35px;
   }
 
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 45px 20px;
-  }
-
-  .hero-right {
-    min-height: 400px;
-  }
-
-  .lamp-visual {
-    font-size: 130px;
-  }
-
-  .sun-shape {
-    width: 250px;
-    height: 250px;
+  .details-heading {
+    margin-top: 35px;
   }
 
   .details-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 15px;
   }
 
-  .details-section {
-    padding: 60px 20px;
+  .detail-item {
+    padding: 25px 15px;
   }
 
-  .details-heading h2 {
-    font-size: 34px;
+  .detail-item h3 {
+    font-size: 24px;
+  }
+
+  .countdown {
+    gap: 12px;
+  }
+
+  .countdown div {
+    width: 95px;
+    padding: 20px 8px;
+  }
+
+  .countdown strong {
+    font-size: 32px;
+  }
+
+  .invitation-message {
+    font-size: 15px;
   }
 }
 
-
 /* =========================================
-   RESPONSIVE DESIGN - SMALL PHONES
+   SMALL PHONE RESPONSIVE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .poster-section {
+    padding: 0;
+  }
+
+  .poster-container {
+    width: 100%;
+  }
+
+  .poster-click-area {
+    left: 8.8%;
+    top: 51.8%;
+    width: 36.5%;
+    height: 5.2%;
+  }
+
+  .details-section {
+    padding: 35px 15px;
+  }
+
+  .details-heading h2 {
+    font-size: 36px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .countdown-container {
+    margin: 35px auto;
+    padding: 15px 5px;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
   .countdown {
-    gap: 10px;
+    gap: 8px;
   }
 
   .countdown div {
     width: 75px;
-    padding: 18px 8px;
+    padding: 18px 5px;
   }
 
   .countdown strong {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .countdown span {
-    font-size: 10px;
-    letter-spacing: 1.1px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .detail-item h3 {
+    font-size: 22px;
+  }
+
+  .detail-item p {
+    font-size: 13px;
+  }
+
+  .details-address {
+    font-size: 13px;
   }
 
   .navigation-buttons {
@@ -671,11 +572,36 @@ footer span {
   }
 
   .map-button {
-    width: 80%;
+    width: 90%;
     text-align: center;
+    font-size: 13px;
   }
 
-  .details-address {
-    font-size: 14px;
+  .calendar-button {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .closing-message h3 {
+    font-size: 29px;
+  }
+
+  .invitation-footer {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
